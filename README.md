@@ -1,16 +1,16 @@
-# 🚗 Car Price Prediction Machine Learning Project
+# Car Price Prediction Machine Learning Project
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.0%2B-orange?logo=scikit-learn)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 📖 Overview
+## Overview
 
 This project aims to predict the selling price of used cars based on various features such as present price, kilometers driven, fuel type, seller type, and transmission. By leveraging Machine Learning regression algorithms, the model assists users and dealerships in estimating the market value of a vehicle accurately.
 
 The solution involves a complete data science pipeline, from exploratory data analysis (EDA) and preprocessing to model training and evaluation.
 
-## ✨ Features
+## Features
 
 - **Comprehensive EDA:** Visual analysis of relationships between car features and selling prices.
 - **Data Preprocessing:** Handling categorical data, feature scaling, and outlier management.
@@ -18,7 +18,7 @@ The solution involves a complete data science pipeline, from exploratory data an
 - **High Accuracy:** Optimized model achieving a high R² score on test data.
 - **Model Persistence:** Saved model files (`.pkl`) for easy deployment and inference.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Tools & Libraries |
 | :--- | :--- |
@@ -28,7 +28,7 @@ The solution involves a complete data science pipeline, from exploratory data an
 | **Machine Learning** | Scikit-Learn |
 | **Environment** | Jupyter Notebook, Google Colab |
 
-## 📊 Dataset
+## Dataset
 
 The dataset contains information about used cars listed for sale. Key features include:
 
@@ -42,7 +42,7 @@ The dataset contains information about used cars listed for sale. Key features i
 - `Transmission`: Manual or Automatic.
 - `Owner`: Number of previous owners.
 
-## 🚀 Methodology
+## Methodology
 
 ### 1. Data Cleaning
 - Checked for null values and duplicates.
@@ -71,7 +71,8 @@ Several regression models were evaluated:
 - **MAE (Mean Absolute Error):** Average magnitude of errors in a set of predictions.
 
 
-## 📋 Installation & Usage
+
+## Installation & Usage
 
 Follow these steps to run the project locally:
 
@@ -79,27 +80,24 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/Vedhinee/Car-Price-Prediction.git
 cd Car-Price-Prediction
-
-
-### 2. Create Virtual Environment (Optional)
+```
+### 2. Create Virtual Environment (Optional but Recommended)
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-
+```
 ### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
-
-
+```
 ### 4. Run the Notebook
 Open the Jupyter Notebook file to explore the code and visualizations:
 ```bash
 jupyter notebook car_price_prediction.ipynb
-
-
-### 5. Load the Model for Prediction
-To use the saved model for new predictions
+```
+### 5. Load Model for Prediction
+To use the saved model for new predictions:
+```bash
 import pickle
 import numpy as np
 
@@ -112,8 +110,12 @@ input_data = np.array([[2015, 10.50, 50000, 0, 1, 0, 1, 0, 0]]).reshape(1, -1)
 prediction = model.predict(input_data)
 
 print(f"Predicted Selling Price: {prediction[0]}")
+```
 
-Future Scope
-- Web Application: Deploy the model using Streamlit or Flask for a user-friendly interface.
-- Feature Engineering: Incorporate more features like car brand reputation, location, and insurance validity.
-- Deep Learning: Experiment with Neural Networks for potentially higher accuracy on larger datasets.
+## Future Scope
+
+- [ ] **Web Application:** Deploy the model using Streamlit or Flask to create a user-friendly interface for real-time predictions.
+- [ ] **Feature Engineering:** Incorporate additional features such as car brand reputation, geographic location, and insurance validity to improve accuracy.
+- [ ] **Deep Learning:** Experiment with Neural Networks (ANN/CNN) to potentially achieve higher accuracy when working with larger datasets.
+- [ ] **API Integration:** Develop a REST API using FastAPI or Flask to allow external applications to access the model.
+- [ ] **Data Pipeline:** Automate the data collection and retraining process to keep the model updated with current market prices.
